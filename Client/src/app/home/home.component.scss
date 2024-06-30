@@ -1,0 +1,46 @@
+.hero{
+    display: flex;
+    justify-content: space-between;
+    .left{
+        width: 30%;
+        margin: 24px;
+        .login-card{
+            background-color: rgba(255, 255, 255, 1);
+            height: auto;
+            width: auto;
+            padding: 24px;
+            border-radius: 8px;
+
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                mat-form-field{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .right{
+        width: 70%;
+        //border: 2px solid white;
+        //border-radius: 8px;
+        padding: 24px;
+        color: white;
+        text-align: start;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .hero{
+        flex-direction: column-reverse;
+
+        .right, .left{
+            width: auto;
+        }
+    }
+}

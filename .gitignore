@@ -1,1 +1,7 @@
 /Client/node_modules/
+.vscode/
+/Client/.angular/cache/
+
+
+/Server/bin/
+/Server/obj/

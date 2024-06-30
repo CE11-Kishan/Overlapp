@@ -1,0 +1,63 @@
+main {
+  background: url("/images/bg.svg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+
+  nav {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: autp;
+    height: 56px;
+    z-index: 2;
+    padding: 16px 24px;
+
+    .logo {
+      margin-right: auto;
+      font-size: 40px;
+      font-weight: bolder;
+      .white {
+        display: flex;
+        color: #005cbb;
+
+        .orange {
+          color: orangered;
+        }
+      }
+    }
+
+    .nav-item {
+      display: flex;
+      margin-left: auto;
+      gap: 16px;
+
+      button {
+        height: 40px;
+        border-radius: 20px;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 200ms ease-in;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  ::ng-deep .main {
+    nav {
+      .nav-item {
+        button {
+          .mdc-button__label {
+            display: none;
+            font-size: 0;
+          }
+        }
+      }
+    }
+  }
+}

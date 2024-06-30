@@ -1,0 +1,46 @@
+<div class="hero">
+  <div class="left">
+    <div class="login-card">
+      <form>
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Enter your name ...." required />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Enter your email ...." required />
+          <mat-icon matSuffix> email </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            placeholder="Enter your password"
+            [type]="hide() ? 'password' : 'text'"
+            required=""
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="clickEvent($event)"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide()"
+          >
+            <mat-icon>{{ hide() ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <button mat-raised-button type="submit">Create Account</button>
+      </form>
+    </div>
+  </div>
+  <div class="right">
+    <h1>Welcome to OverlApp</h1>
+    <h3>A platform built to overlap experts and skill seeker's path. <br>
+    Register now to learn and share knowledge.
+    </h3>
+  </div>
+</div>
+
+<div class="example-button-row"></div>
